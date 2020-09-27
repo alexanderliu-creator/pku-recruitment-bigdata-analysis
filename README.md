@@ -1,17 +1,12 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
-# Changes
+# Hadoop Docker with Spark
 
-Version 2.0.0 introduces uses wait_for_it script for the cluster startup
-
-# Hadoop Docker
-
-## Supported Hadoop Versions
-See repository branches for supported hadoop versions
+My attempt to have a Docker environment with Hadoop and Spark.
 
 ## Quick Start
 
-To deploy an example HDFS cluster, run:
+To deploy an the HDFS cluster, run:
 ```
   docker-compose up
 ```
