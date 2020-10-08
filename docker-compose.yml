@@ -99,5 +99,4 @@ volumes:
 
 networks:
   spark-net:
-    external:
-      name: spark-net
+    name: spark-net
