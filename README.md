@@ -1,6 +1,6 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
-# WARNING: THIS SETUP IS NOT WORKING CORRECTLY YET!!
+# WARNING: This setup seems to work now, but let's wait and see after the restart of my laptop, huh?
 
 # Hadoop Docker with Spark
 
