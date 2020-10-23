@@ -9,6 +9,7 @@ build:
 	docker build -t bde2020/hadoop-nodemanager:$(current_branch) ./nodemanager
 	docker build -t bde2020/hadoop-historyserver:$(current_branch) ./historyserver
 	docker build -t bde2020/hadoop-submit:$(current_branch) ./submit
+	docker build -t bde2020/hive:$(current_branch) ./
 
 wordcount:
 	docker build -t hadoop-wordcount ./submit
