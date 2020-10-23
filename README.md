@@ -1,14 +1,12 @@
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/big-data-europe/Lobby)
 
-# WARNING: This setup seems to work now, but let's wait and see after the restart of my laptop, huh?
+# Docker multi-container environment with Hadoop, Spark and Hive
 
-# Hadoop Docker with Spark
-
-My attempt to have a Docker environment with Hadoop and Spark.
+This is it: a Docker multi-container environment with Hadoop (HDFS), Spark and Hive. But without the large memory requirements of a Cloudera sandbox. (On my Windows 10 laptop (with WSL2) it seems to consume a mere 3 GB.)
 
 ## Quick Start
 
-To deploy an the HDFS cluster, run:
+To deploy an the HDFS-Spark-Hive cluster, run:
 ```
   docker-compose up
 ```
