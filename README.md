@@ -14,11 +14,6 @@ To deploy an the HDFS-Spark-Hive cluster, run:
   docker-compose up
 ```
 
-Run example wordcount job:
-```
-  make wordcount
-```
-
 `docker-compose` creates a docker network that can be found by running `docker network list`, e.g. `docker-hadoop-spark-hive_default`.
 
 Run `docker network inspect` on the network (e.g. `docker-hadoop-spark-hive_default`) to find the IP the hadoop interfaces are published on. Access these interfaces with the following URLs:
