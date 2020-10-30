@@ -62,7 +62,60 @@ Copy breweries.csv to HDFS:
 ```
 
 
-## Quick Start Spark
+## Quick Start Spark (PySpark)
+
+Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop). Here you find the spark:// master address:
+```
+  Spark Master at spark://452dd59615b0:7077
+```
+
+Go to the command line of the Spark master and start spark-shell.
+```
+  docker ps |grep spark
+efef70177b0b        bde2020/spark-worker:3.0.0-hadoop3.2                     "/bin/bash /worker.sh"   27 hours ago        Up 12 hours                0.0.0.0:8081->8081/tcp                                     spark-worker-1
+453dd19695b0        bde2020/spark-master:3.0.0-hadoop3.2                     "/bin/bash /master.sh"   27 hours ago        Up 12 hours                0.0.0.0:7077->7077/tcp, 6066/tcp, 0.0.0.0:8080->8080/tcp   spark-master
+
+  docker exec -it 453dd19695b0 bash
+
+  /spark/bin/pyspark --master spark://69280b13519d:7077
+```
+
+Load breweries.csv from HDFS.
+```
+  brewfile = spark.read.csv("hdfs://namenode:8020/data/openbeer/breweries/breweries.csv")
+  
+  brewfile.show()
++----+--------------------+-------------+-----+---+
+| _c0|                 _c1|          _c2|  _c3|_c4|
++----+--------------------+-------------+-----+---+
+|null|                name|         city|state| id|
+|   0|  NorthGate Brewing |  Minneapolis|   MN|  0|
+|   1|Against the Grain...|   Louisville|   KY|  1|
+|   2|Jack's Abby Craft...|   Framingham|   MA|  2|
+|   3|Mike Hess Brewing...|    San Diego|   CA|  3|
+|   4|Fort Point Beer C...|San Francisco|   CA|  4|
+|   5|COAST Brewing Com...|   Charleston|   SC|  5|
+|   6|Great Divide Brew...|       Denver|   CO|  6|
+|   7|    Tapistry Brewing|     Bridgman|   MI|  7|
+|   8|    Big Lake Brewing|      Holland|   MI|  8|
+|   9|The Mitten Brewin...| Grand Rapids|   MI|  9|
+|  10|      Brewery Vivant| Grand Rapids|   MI| 10|
+|  11|    Petoskey Brewing|     Petoskey|   MI| 11|
+|  12|  Blackrocks Brewery|    Marquette|   MI| 12|
+|  13|Perrin Brewing Co...|Comstock Park|   MI| 13|
+|  14|Witch's Hat Brewi...|   South Lyon|   MI| 14|
+|  15|Founders Brewing ...| Grand Rapids|   MI| 15|
+|  16|   Flat 12 Bierwerks| Indianapolis|   IN| 16|
+|  17|Tin Man Brewing C...|   Evansville|   IN| 17|
+|  18|Black Acre Brewin...| Indianapolis|   IN| 18|
++----+--------------------+-------------+-----+---+
+only showing top 20 rows
+
+```
+
+
+
+## Quick Start Spark (Scala)
 
 Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop). Here you find the spark:// master address:
 ```
