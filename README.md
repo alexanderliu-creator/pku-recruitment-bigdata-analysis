@@ -29,22 +29,14 @@ Run `docker network inspect` on the network (e.g. `docker-hadoop-spark-hive_defa
 
 ## Quick Start HDFS
 
-Find the Container ID of the namenode.
-```
-  docker ps |grep namenode
-
-1df7a57164de        bde2020/hadoop-namenode:2.0.0-hadoop3.2.1-java8          "/entrypoint.sh /run…"   27 hours ago        Up 12 hours (healthy)      0.0.0.0:9000->9000/tcp, 0.0.0.0:9870->9870/tcp             namenode
-
-```
-
 Copy breweries.csv to the namenode.
 ```
-  docker cp breweries.csv 1df7a57164de:breweries.csv
+  docker cp breweries.csv namenode:breweries.csv
 ```
 
 Go to the bash shell on the namenode with that same Container ID of the namenode.
 ```
-  docker exec -it 1df7a57164de bash
+  docker exec -it namenode bash
 ```
 
 
@@ -64,20 +56,13 @@ Copy breweries.csv to HDFS:
 
 ## Quick Start Spark (PySpark)
 
-Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop). Here you find the spark:// master address:
-```
-  Spark Master at spark://452dd59615b0:7077
-```
+Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop) to see the status of the Spark master.
 
-Go to the command line of the Spark master and start spark-shell.
+Go to the command line of the Spark master and start PySpark.
 ```
-  docker ps |grep spark
-efef70177b0b        bde2020/spark-worker:3.0.0-hadoop3.2                     "/bin/bash /worker.sh"   27 hours ago        Up 12 hours                0.0.0.0:8081->8081/tcp                                     spark-worker-1
-453dd19695b0        bde2020/spark-master:3.0.0-hadoop3.2                     "/bin/bash /master.sh"   27 hours ago        Up 12 hours                0.0.0.0:7077->7077/tcp, 6066/tcp, 0.0.0.0:8080->8080/tcp   spark-master
+  docker exec -it spark-master bash
 
-  docker exec -it 453dd19695b0 bash
-
-  /spark/bin/pyspark --master spark://69280b13519d:7077
+  /spark/bin/pyspark --master spark://spark-master:7077
 ```
 
 Load breweries.csv from HDFS.
@@ -117,20 +102,13 @@ only showing top 20 rows
 
 ## Quick Start Spark (Scala)
 
-Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop). Here you find the spark:// master address:
-```
-  Spark Master at spark://452dd59615b0:7077
-```
+Go to http://<dockerhadoop_IP_address>:8080 or http://localhost:8080/ on your Docker host (laptop) to see the status of the Spark master.
 
 Go to the command line of the Spark master and start spark-shell.
 ```
-  docker ps |grep spark
-efef70177b0b        bde2020/spark-worker:3.0.0-hadoop3.2                     "/bin/bash /worker.sh"   27 hours ago        Up 12 hours                0.0.0.0:8081->8081/tcp                                     spark-worker-1
-453dd19695b0        bde2020/spark-master:3.0.0-hadoop3.2                     "/bin/bash /master.sh"   27 hours ago        Up 12 hours                0.0.0.0:7077->7077/tcp, 6066/tcp, 0.0.0.0:8080->8080/tcp   spark-master
-
-  docker exec -it 453dd19695b0 bash
+  docker exec -it spark-master bash
   
-  spark/bin/spark-shell --master spark://452dd59615b0:7077
+  spark/bin/spark-shell --master spark://spark-master:7077
 ```
 
 Load breweries.csv from HDFS.
@@ -171,19 +149,10 @@ How cool is that? Your own Spark cluster to play with.
 
 ## Quick Start Hive
 
-Find the Container ID of the Hive Server.
-
-```
-  docker ps |grep hive-server
-
-60f2c3b5eb32        bde2020/hive:2.3.2-postgresql-metastore                  "entrypoint.sh /bin/…"   27 hours ago        Up 12 hours                       0.0.0.0:10000->10000/tcp, 10002/tcp                        hive-server
-
-```
-
 Go to the command line of the Hive server and start hiveserver2
 
 ```
-  docker exec -it 60f2c3b5eb32 bash
+  docker exec -it hive-server bash
 
   hiveserver2
 ```
