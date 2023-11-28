@@ -20,13 +20,15 @@ services:
     image: bde2020/hadoop-datanode:2.0.0-hadoop3.2.1-java8
     container_name: datanode
     restart: always
+    depends_on: 
+      - namenode
     volumes:
       - hadoop_datanode:/hadoop/dfs/data
     environment:
       SERVICE_PRECONDITION: "namenode:9870"
       CORE_CONF_fs_defaultFS: hdfs://namenode:9000
     ports:
-      - "9864:9864"
+      - 9864:9864
     env_file:
       - ./hadoop.env
 
@@ -36,6 +38,8 @@ services:
     restart: always
     environment:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864"
+    ports:
+      - 8088:8088
     env_file:
       - ./hadoop.env
 
@@ -45,6 +49,8 @@ services:
     restart: always
     environment:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
+    ports:
+      - 8042:8042
     env_file:
       - ./hadoop.env
 
@@ -56,6 +62,8 @@ services:
       SERVICE_PRECONDITION: "namenode:9000 namenode:9870 datanode:9864 resourcemanager:8088"
     volumes:
       - hadoop_historyserver:/hadoop/yarn/timeline
+    ports:
+      - 8188:8188
     env_file:
       - ./hadoop.env
 
@@ -86,6 +94,7 @@ services:
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
     container_name: hive-server
+    restart: always
     depends_on:
       - namenode
       - datanode
@@ -95,11 +104,13 @@ services:
       HIVE_CORE_CONF_javax_jdo_option_ConnectionURL: "jdbc:postgresql://hive-metastore/metastore"
       SERVICE_PRECONDITION: "hive-metastore:9083"
     ports:
-      - "10000:10000"
+      - 10000:10000
+      - 10002:10002
 
   hive-metastore:
     image: bde2020/hive:2.3.2-postgresql-metastore
     container_name: hive-metastore
+    restart: always
     env_file:
       - ./hadoop-hive.env
     command: /opt/hive/bin/hive --service metastore
@@ -111,6 +122,8 @@ services:
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
     container_name: hive-metastore-postgresql
+    volumes:
+      - hive_metastore:/var/lib/postgresql/data
 
   presto-coordinator:
     image: shawnzhu/prestodb:0.181
@@ -122,4 +135,4 @@ volumes:
   hadoop_namenode:
   hadoop_datanode:
   hadoop_historyserver:
-
+  hive_metastore:
