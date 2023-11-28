@@ -10,8 +10,20 @@ The only thing lacking, is that Hive server doesn't start automatically. To be a
 ## Quick Start
 
 To deploy an the HDFS-Spark-Hive cluster, run:
+
+初次启动
 ```
-  docker-compose up
+  docker-compose up -d
+  docker exec hive-metastore-postgresql createdb -U postgres hue_mate
+  docker-compose restart hue
+  docker exec hue /usr/share/hue/build/env/bin/hue syncdb
+  docker exec hue /usr/share/hue/build/env/bin/hue migrate
+  docker-compose restart hue
+```
+
+后续再次启动
+```bash
+  docker-compose up -d
 ```
 
 `docker-compose` creates a docker network that can be found by running `docker network list`, e.g. `docker-hadoop-spark-hive_default`.
