@@ -1,0 +1,12 @@
+Watching for file changes with StatReloader
+/opt/bitnami/python/lib/python3.6/site-packages/pandas/compat/__init__.py:120: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
+  warnings.warn(msg)
+[29/Dec/2023 18:00:33] "GET / HTTP/1.1" 200 32297
+[29/Dec/2023 23:32:44] "GET / HTTP/1.1" 200 32301
+Not Found: /favicon.ico
+[29/Dec/2023 23:32:45] "GET /favicon.ico HTTP/1.1" 404 2620
+[29/Dec/2023 23:32:48] "GET /backend HTTP/1.1" 301 0
+[29/Dec/2023 23:32:48] "GET /backend/ HTTP/1.1" 200 49834
+Not Found: /favicon.ico
+[29/Dec/2023 23:32:49] "GET /favicon.ico HTTP/1.1" 404 2620
+[29/Dec/2023 23:33:02] "POST /submit_form/ HTTP/1.1" 200 30

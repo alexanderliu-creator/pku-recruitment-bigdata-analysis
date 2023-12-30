@@ -1,0 +1,1212 @@
+23/12/29 17:59:01 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+/opt/bitnami/python/lib/python3.6/site-packages/pandas/compat/__init__.py:120: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
+  warnings.warn(msg)
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+23/12/29 17:59:02 INFO SparkContext: Running Spark version 2.4.3
+23/12/29 17:59:02 INFO SparkContext: Submitted application: prediction
+23/12/29 17:59:02 INFO SecurityManager: Changing view acls to: root
+23/12/29 17:59:02 INFO SecurityManager: Changing modify acls to: root
+23/12/29 17:59:02 INFO SecurityManager: Changing view acls groups to: 
+23/12/29 17:59:02 INFO SecurityManager: Changing modify acls groups to: 
+23/12/29 17:59:02 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(root); groups with view permissions: Set(); users  with modify permissions: Set(root); groups with modify permissions: Set()
+23/12/29 17:59:02 INFO Utils: Successfully started service 'sparkDriver' on port 35687.
+23/12/29 17:59:02 INFO SparkEnv: Registering MapOutputTracker
+23/12/29 17:59:02 INFO SparkEnv: Registering BlockManagerMaster
+23/12/29 17:59:02 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+23/12/29 17:59:02 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+23/12/29 17:59:02 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5e59ee85-2359-4e10-b05c-74bc4970c4ed
+23/12/29 17:59:02 INFO MemoryStore: MemoryStore started with capacity 366.3 MB
+23/12/29 17:59:02 INFO SparkEnv: Registering OutputCommitCoordinator
+23/12/29 17:59:02 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+23/12/29 17:59:02 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://b2ee84b9497b:4040
+23/12/29 17:59:02 INFO StandaloneAppClient$ClientEndpoint: Connecting to master spark://spark-master:7077...
+23/12/29 17:59:02 INFO TransportClientFactory: Successfully created connection to spark-master/172.28.0.2:7077 after 24 ms (0 ms spent in bootstraps)
+23/12/29 17:59:02 INFO StandaloneSchedulerBackend: Connected to Spark cluster with app ID app-20231229175902-0000
+23/12/29 17:59:02 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 44497.
+23/12/29 17:59:02 INFO NettyBlockTransferService: Server created on b2ee84b9497b:44497
+23/12/29 17:59:02 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+23/12/29 17:59:02 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20231229175902-0000/0 on worker-20231229175853-172.28.0.10-34115 (172.28.0.10:34115) with 1 core(s)
+23/12/29 17:59:02 INFO StandaloneSchedulerBackend: Granted executor ID app-20231229175902-0000/0 on hostPort 172.28.0.10:34115 with 1 core(s), 1024.0 MB RAM
+23/12/29 17:59:02 INFO StandaloneAppClient$ClientEndpoint: Executor added: app-20231229175902-0000/1 on worker-20231229175847-172.28.0.4-44851 (172.28.0.4:44851) with 1 core(s)
+23/12/29 17:59:02 INFO StandaloneSchedulerBackend: Granted executor ID app-20231229175902-0000/1 on hostPort 172.28.0.4:44851 with 1 core(s), 1024.0 MB RAM
+23/12/29 17:59:02 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, b2ee84b9497b, 44497, None)
+23/12/29 17:59:02 INFO BlockManagerMasterEndpoint: Registering block manager b2ee84b9497b:44497 with 366.3 MB RAM, BlockManagerId(driver, b2ee84b9497b, 44497, None)
+23/12/29 17:59:02 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, b2ee84b9497b, 44497, None)
+23/12/29 17:59:02 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, b2ee84b9497b, 44497, None)
+23/12/29 17:59:02 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20231229175902-0000/1 is now RUNNING
+23/12/29 17:59:02 INFO StandaloneAppClient$ClientEndpoint: Executor updated: app-20231229175902-0000/0 is now RUNNING
+23/12/29 17:59:03 INFO StandaloneSchedulerBackend: SchedulerBackend is ready for scheduling beginning after reached minRegisteredResourcesRatio: 0.0
+23/12/29 17:59:03 INFO SharedState: loading hive config file: file:/opt/bitnami/spark/conf/hive-site.xml
+23/12/29 17:59:03 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/opt/bitnami/spark/spark-warehouse').
+23/12/29 17:59:03 INFO SharedState: Warehouse path is 'file:/opt/bitnami/spark/spark-warehouse'.
+23/12/29 17:59:03 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+INFO:     Started server process [294]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8066 (Press CTRL+C to quit)
+23/12/29 17:59:04 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.28.0.10:43608) with ID 0
+23/12/29 17:59:04 INFO CoarseGrainedSchedulerBackend$DriverEndpoint: Registered executor NettyRpcEndpointRef(spark-client://Executor) (172.28.0.4:54908) with ID 1
+23/12/29 17:59:04 INFO BlockManagerMasterEndpoint: Registering block manager 172.28.0.4:35617 with 366.3 MB RAM, BlockManagerId(1, 172.28.0.4, 35617, None)
+23/12/29 17:59:04 INFO BlockManagerMasterEndpoint: Registering block manager 172.28.0.10:44153 with 366.3 MB RAM, BlockManagerId(0, 172.28.0.10, 44153, None)
+INFO:     172.28.0.1:57854 - "GET / HTTP/1.1" 404 Not Found
+23/12/29 23:32:54 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 240.8 KB, free 366.1 MB)
+23/12/29 23:32:54 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 23.4 KB, free 366.0 MB)
+23/12/29 23:32:54 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:54 INFO SparkContext: Created broadcast 0 from textFile at NativeMethodAccessorImpl.java:0
+23/12/29 23:32:54 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:54 INFO SparkContext: Starting job: runJob at PythonRDD.scala:153
+23/12/29 23:32:54 INFO DAGScheduler: Got job 0 (runJob at PythonRDD.scala:153) with 1 output partitions
+23/12/29 23:32:54 INFO DAGScheduler: Final stage: ResultStage 0 (runJob at PythonRDD.scala:153)
+23/12/29 23:32:54 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:54 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:54 INFO DAGScheduler: Submitting ResultStage 0 (PythonRDD[2] at RDD at PythonRDD.scala:53), which has no missing parents
+23/12/29 23:32:54 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 6.0 KB, free 366.0 MB)
+23/12/29 23:32:54 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.8 KB, free 366.0 MB)
+23/12/29 23:32:54 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on b2ee84b9497b:44497 (size: 3.8 KB, free: 366.3 MB)
+23/12/29 23:32:54 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:54 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 0 (PythonRDD[2] at RDD at PythonRDD.scala:53) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:54 INFO TaskSchedulerImpl: Adding task set 0.0 with 1 tasks
+23/12/29 23:32:54 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, 172.28.0.4, executor 1, partition 0, ANY, 7921 bytes)
+23/12/29 23:32:55 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 172.28.0.4:35617 (size: 3.8 KB, free: 366.3 MB)
+23/12/29 23:32:55 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:56 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 1248 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+23/12/29 23:32:56 INFO PythonAccumulatorV2: Connected to AccumulatorServer at host: 127.0.0.1 port: 39671
+23/12/29 23:32:56 INFO DAGScheduler: ResultStage 0 (runJob at PythonRDD.scala:153) finished in 1.304 s
+23/12/29 23:32:56 INFO DAGScheduler: Job 0 finished: runJob at PythonRDD.scala:153, took 1.351384 s
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 240.8 KB, free 365.8 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.8 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 2 from textFile at ReadWrite.scala:615
+23/12/29 23:32:56 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:56 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:32:56 INFO DAGScheduler: Got job 1 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:32:56 INFO DAGScheduler: Final stage: ResultStage 1 (first at ReadWrite.scala:615)
+23/12/29 23:32:56 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:56 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:56 INFO DAGScheduler: Submitting ResultStage 1 (hdfs://namenode:9000/model/regression/metadata MapPartitionsRDD[4] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.5 KB, free 365.8 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.8 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 1 (hdfs://namenode:9000/model/regression/metadata MapPartitionsRDD[4] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Adding task set 1.0 with 1 tasks
+23/12/29 23:32:56 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 1, 172.28.0.4, executor 1, partition 0, ANY, 7921 bytes)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 1) in 100 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+23/12/29 23:32:56 INFO DAGScheduler: ResultStage 1 (first at ReadWrite.scala:615) finished in 0.109 s
+23/12/29 23:32:56 INFO DAGScheduler: Job 1 finished: first at ReadWrite.scala:615, took 0.113225 s
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 240.8 KB, free 365.5 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.5 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 4 from textFile at ReadWrite.scala:615
+23/12/29 23:32:56 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:56 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:32:56 INFO DAGScheduler: Got job 2 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:32:56 INFO DAGScheduler: Final stage: ResultStage 2 (first at ReadWrite.scala:615)
+23/12/29 23:32:56 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:56 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:56 INFO DAGScheduler: Submitting ResultStage 2 (hdfs://namenode:9000/model/regression/stages/0_StringIndexer_69d5712b5f5d/metadata MapPartitionsRDD[6] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_5 stored as values in memory (estimated size 3.5 KB, free 365.5 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_5_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.5 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 5 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (hdfs://namenode:9000/model/regression/stages/0_StringIndexer_69d5712b5f5d/metadata MapPartitionsRDD[6] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+23/12/29 23:32:56 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 2, 172.28.0.4, executor 1, partition 0, ANY, 7957 bytes)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_5_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 2) in 60 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+23/12/29 23:32:56 INFO DAGScheduler: ResultStage 2 (first at ReadWrite.scala:615) finished in 0.070 s
+23/12/29 23:32:56 INFO DAGScheduler: Job 2 finished: first at ReadWrite.scala:615, took 0.073602 s
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_6 stored as values in memory (estimated size 240.8 KB, free 365.3 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_6_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.2 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 6 from textFile at ReadWrite.scala:615
+23/12/29 23:32:56 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:56 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:32:56 INFO DAGScheduler: Got job 3 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:32:56 INFO DAGScheduler: Final stage: ResultStage 3 (first at ReadWrite.scala:615)
+23/12/29 23:32:56 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:56 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:56 INFO DAGScheduler: Submitting ResultStage 3 (hdfs://namenode:9000/model/regression/stages/0_StringIndexer_69d5712b5f5d/metadata MapPartitionsRDD[8] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_7 stored as values in memory (estimated size 3.5 KB, free 365.2 MB)
+23/12/29 23:32:56 INFO MemoryStore: Block broadcast_7_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.2 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:56 INFO SparkContext: Created broadcast 7 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:56 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (hdfs://namenode:9000/model/regression/stages/0_StringIndexer_69d5712b5f5d/metadata MapPartitionsRDD[8] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:56 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+23/12/29 23:32:56 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 3, 172.28.0.10, executor 0, partition 0, ANY, 7957 bytes)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_7_piece0 in memory on 172.28.0.10:44153 (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:56 INFO BlockManagerInfo: Added broadcast_6_piece0 in memory on 172.28.0.10:44153 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:57 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 3) in 748 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:32:57 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+23/12/29 23:32:57 INFO DAGScheduler: ResultStage 3 (first at ReadWrite.scala:615) finished in 0.758 s
+23/12/29 23:32:57 INFO DAGScheduler: Job 3 finished: first at ReadWrite.scala:615, took 0.761044 s
+23/12/29 23:32:57 INFO SparkContext: Starting job: parquet at StringIndexer.scala:313
+23/12/29 23:32:57 INFO DAGScheduler: Got job 4 (parquet at StringIndexer.scala:313) with 1 output partitions
+23/12/29 23:32:57 INFO DAGScheduler: Final stage: ResultStage 4 (parquet at StringIndexer.scala:313)
+23/12/29 23:32:57 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:57 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:57 INFO DAGScheduler: Submitting ResultStage 4 (MapPartitionsRDD[10] at parquet at StringIndexer.scala:313), which has no missing parents
+23/12/29 23:32:57 INFO MemoryStore: Block broadcast_8 stored as values in memory (estimated size 71.1 KB, free 365.2 MB)
+23/12/29 23:32:57 INFO MemoryStore: Block broadcast_8_piece0 stored as bytes in memory (estimated size 25.5 KB, free 365.1 MB)
+23/12/29 23:32:57 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on b2ee84b9497b:44497 (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:32:57 INFO SparkContext: Created broadcast 8 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 4 (MapPartitionsRDD[10] at parquet at StringIndexer.scala:313) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:57 INFO TaskSchedulerImpl: Adding task set 4.0 with 1 tasks
+23/12/29 23:32:57 INFO TaskSetManager: Starting task 0.0 in stage 4.0 (TID 4, 172.28.0.10, executor 0, partition 0, PROCESS_LOCAL, 8117 bytes)
+23/12/29 23:32:57 INFO BlockManagerInfo: Added broadcast_8_piece0 in memory on 172.28.0.10:44153 (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:32:57 INFO TaskSetManager: Finished task 0.0 in stage 4.0 (TID 4) in 233 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:32:57 INFO TaskSchedulerImpl: Removed TaskSet 4.0, whose tasks have all completed, from pool 
+23/12/29 23:32:57 INFO DAGScheduler: ResultStage 4 (parquet at StringIndexer.scala:313) finished in 0.254 s
+23/12/29 23:32:57 INFO DAGScheduler: Job 4 finished: parquet at StringIndexer.scala:313, took 0.257261 s
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 50
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 46
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 82
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 100
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 17
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 115
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 63
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 11
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_6_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_6_piece0 on 172.28.0.10:44153 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 5
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 75
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 34
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 14
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 18
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 94
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_2_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 87
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 77
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 90
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 15
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 76
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 81
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 16
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 21
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 98
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 60
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 65
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 59
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 92
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 120
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 53
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 52
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 84
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 111
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 74
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 28
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 80
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 123
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 25
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 95
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_7_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_7_piece0 on 172.28.0.10:44153 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 2
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 8
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 20
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 42
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 71
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 88
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 121
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_3_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 36
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 55
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 45
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 103
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 26
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_1_piece0 on b2ee84b9497b:44497 in memory (size: 3.8 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 172.28.0.4:35617 in memory (size: 3.8 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 32
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 83
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_8_piece0 on b2ee84b9497b:44497 in memory (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_8_piece0 on 172.28.0.10:44153 in memory (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 31
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 116
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 101
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 1
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 39
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_4_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_4_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 70
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 105
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 57
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 58
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 91
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 110
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 7
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 41
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 67
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 40
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 66
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 13
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 54
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 89
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 78
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 62
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 3
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 10
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 119
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 4
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 106
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 108
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 117
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 112
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 86
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 69
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 47
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 35
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 79
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 64
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 124
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 48
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 24
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 23
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 72
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 49
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 29
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 102
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 114
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 38
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 104
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 27
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 33
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 44
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 22
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 12
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 93
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 51
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 107
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 68
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 96
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 73
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 43
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 37
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 6
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_5_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Removed broadcast_5_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 9
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 97
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 118
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 19
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 61
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 125
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 30
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 85
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 56
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 122
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 109
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 113
+23/12/29 23:32:58 INFO ContextCleaner: Cleaned accumulator 99
+23/12/29 23:32:58 INFO FileSourceStrategy: Pruning directories with: 
+23/12/29 23:32:58 INFO FileSourceStrategy: Post-Scan Filters: 
+23/12/29 23:32:58 INFO FileSourceStrategy: Output Data Schema: struct<labels: array<string>>
+23/12/29 23:32:58 INFO FileSourceScanExec: Pushed Filters: 
+23/12/29 23:32:58 INFO CodeGenerator: Code generated in 158.402672 ms
+23/12/29 23:32:58 INFO CodeGenerator: Code generated in 9.807793 ms
+23/12/29 23:32:58 INFO MemoryStore: Block broadcast_9 stored as values in memory (estimated size 283.2 KB, free 365.8 MB)
+23/12/29 23:32:58 INFO MemoryStore: Block broadcast_9_piece0 stored as bytes in memory (estimated size 24.5 KB, free 365.7 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on b2ee84b9497b:44497 (size: 24.5 KB, free: 366.3 MB)
+23/12/29 23:32:58 INFO SparkContext: Created broadcast 9 from head at StringIndexer.scala:315
+23/12/29 23:32:58 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+23/12/29 23:32:58 INFO SparkContext: Starting job: head at StringIndexer.scala:315
+23/12/29 23:32:58 INFO DAGScheduler: Got job 5 (head at StringIndexer.scala:315) with 1 output partitions
+23/12/29 23:32:58 INFO DAGScheduler: Final stage: ResultStage 5 (head at StringIndexer.scala:315)
+23/12/29 23:32:58 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:58 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:58 INFO DAGScheduler: Submitting ResultStage 5 (MapPartitionsRDD[14] at head at StringIndexer.scala:315), which has no missing parents
+23/12/29 23:32:58 INFO MemoryStore: Block broadcast_10 stored as values in memory (estimated size 8.9 KB, free 365.7 MB)
+23/12/29 23:32:58 INFO MemoryStore: Block broadcast_10_piece0 stored as bytes in memory (estimated size 4.5 KB, free 365.7 MB)
+23/12/29 23:32:58 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on b2ee84b9497b:44497 (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:32:58 INFO SparkContext: Created broadcast 10 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:58 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 5 (MapPartitionsRDD[14] at head at StringIndexer.scala:315) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:58 INFO TaskSchedulerImpl: Adding task set 5.0 with 1 tasks
+23/12/29 23:32:58 INFO TaskSetManager: Starting task 0.0 in stage 5.0 (TID 5, 172.28.0.10, executor 0, partition 0, ANY, 8428 bytes)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_10_piece0 in memory on 172.28.0.10:44153 (size: 4.5 KB, free: 366.3 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_9_piece0 in memory on 172.28.0.10:44153 (size: 24.5 KB, free: 366.3 MB)
+23/12/29 23:32:59 INFO TaskSetManager: Finished task 0.0 in stage 5.0 (TID 5) in 556 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Removed TaskSet 5.0, whose tasks have all completed, from pool 
+23/12/29 23:32:59 INFO DAGScheduler: ResultStage 5 (head at StringIndexer.scala:315) finished in 0.576 s
+23/12/29 23:32:59 INFO DAGScheduler: Job 5 finished: head at StringIndexer.scala:315, took 0.583107 s
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_11 stored as values in memory (estimated size 240.8 KB, free 365.5 MB)
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_11_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.5 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO SparkContext: Created broadcast 11 from textFile at ReadWrite.scala:615
+23/12/29 23:32:59 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:59 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:32:59 INFO DAGScheduler: Got job 6 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:32:59 INFO DAGScheduler: Final stage: ResultStage 6 (first at ReadWrite.scala:615)
+23/12/29 23:32:59 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:59 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:59 INFO DAGScheduler: Submitting ResultStage 6 (hdfs://namenode:9000/model/regression/stages/1_StringIndexer_04de361589f8/metadata MapPartitionsRDD[16] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_12 stored as values in memory (estimated size 3.5 KB, free 365.5 MB)
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_12_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.5 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO SparkContext: Created broadcast 12 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 6 (hdfs://namenode:9000/model/regression/stages/1_StringIndexer_04de361589f8/metadata MapPartitionsRDD[16] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Adding task set 6.0 with 1 tasks
+23/12/29 23:32:59 INFO TaskSetManager: Starting task 0.0 in stage 6.0 (TID 6, 172.28.0.10, executor 0, partition 0, ANY, 7957 bytes)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_12_piece0 in memory on 172.28.0.10:44153 (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_11_piece0 in memory on 172.28.0.10:44153 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO TaskSetManager: Finished task 0.0 in stage 6.0 (TID 6) in 62 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Removed TaskSet 6.0, whose tasks have all completed, from pool 
+23/12/29 23:32:59 INFO DAGScheduler: ResultStage 6 (first at ReadWrite.scala:615) finished in 0.068 s
+23/12/29 23:32:59 INFO DAGScheduler: Job 6 finished: first at ReadWrite.scala:615, took 0.070961 s
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_13 stored as values in memory (estimated size 240.8 KB, free 365.2 MB)
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_13_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.2 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO SparkContext: Created broadcast 13 from textFile at ReadWrite.scala:615
+23/12/29 23:32:59 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:32:59 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:32:59 INFO DAGScheduler: Got job 7 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:32:59 INFO DAGScheduler: Final stage: ResultStage 7 (first at ReadWrite.scala:615)
+23/12/29 23:32:59 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:59 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:59 INFO DAGScheduler: Submitting ResultStage 7 (hdfs://namenode:9000/model/regression/stages/1_StringIndexer_04de361589f8/metadata MapPartitionsRDD[18] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_14 stored as values in memory (estimated size 3.5 KB, free 365.2 MB)
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_14_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.2 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO SparkContext: Created broadcast 14 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 7 (hdfs://namenode:9000/model/regression/stages/1_StringIndexer_04de361589f8/metadata MapPartitionsRDD[18] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Adding task set 7.0 with 1 tasks
+23/12/29 23:32:59 INFO TaskSetManager: Starting task 0.0 in stage 7.0 (TID 7, 172.28.0.10, executor 0, partition 0, ANY, 7957 bytes)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_14_piece0 in memory on 172.28.0.10:44153 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_13_piece0 in memory on 172.28.0.10:44153 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO TaskSetManager: Finished task 0.0 in stage 7.0 (TID 7) in 47 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Removed TaskSet 7.0, whose tasks have all completed, from pool 
+23/12/29 23:32:59 INFO DAGScheduler: ResultStage 7 (first at ReadWrite.scala:615) finished in 0.051 s
+23/12/29 23:32:59 INFO DAGScheduler: Job 7 finished: first at ReadWrite.scala:615, took 0.053208 s
+23/12/29 23:32:59 INFO SparkContext: Starting job: parquet at StringIndexer.scala:313
+23/12/29 23:32:59 INFO DAGScheduler: Got job 8 (parquet at StringIndexer.scala:313) with 1 output partitions
+23/12/29 23:32:59 INFO DAGScheduler: Final stage: ResultStage 8 (parquet at StringIndexer.scala:313)
+23/12/29 23:32:59 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:32:59 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:32:59 INFO DAGScheduler: Submitting ResultStage 8 (MapPartitionsRDD[20] at parquet at StringIndexer.scala:313), which has no missing parents
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_15 stored as values in memory (estimated size 71.1 KB, free 365.1 MB)
+23/12/29 23:32:59 INFO MemoryStore: Block broadcast_15_piece0 stored as bytes in memory (estimated size 25.5 KB, free 365.1 MB)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on b2ee84b9497b:44497 (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:32:59 INFO SparkContext: Created broadcast 15 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:32:59 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 8 (MapPartitionsRDD[20] at parquet at StringIndexer.scala:313) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:32:59 INFO TaskSchedulerImpl: Adding task set 8.0 with 1 tasks
+23/12/29 23:32:59 INFO TaskSetManager: Starting task 0.0 in stage 8.0 (TID 8, 172.28.0.4, executor 1, partition 0, PROCESS_LOCAL, 8117 bytes)
+23/12/29 23:32:59 INFO BlockManagerInfo: Added broadcast_15_piece0 in memory on 172.28.0.4:35617 (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO TaskSetManager: Finished task 0.0 in stage 8.0 (TID 8) in 183 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Removed TaskSet 8.0, whose tasks have all completed, from pool 
+23/12/29 23:33:00 INFO DAGScheduler: ResultStage 8 (parquet at StringIndexer.scala:313) finished in 0.203 s
+23/12/29 23:33:00 INFO DAGScheduler: Job 8 finished: parquet at StringIndexer.scala:313, took 0.205192 s
+23/12/29 23:33:00 INFO FileSourceStrategy: Pruning directories with: 
+23/12/29 23:33:00 INFO FileSourceStrategy: Post-Scan Filters: 
+23/12/29 23:33:00 INFO FileSourceStrategy: Output Data Schema: struct<labels: array<string>>
+23/12/29 23:33:00 INFO FileSourceScanExec: Pushed Filters: 
+23/12/29 23:33:00 INFO CodeGenerator: Code generated in 15.027686 ms
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_16 stored as values in memory (estimated size 283.2 KB, free 364.8 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_16_piece0 stored as bytes in memory (estimated size 24.5 KB, free 364.8 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on b2ee84b9497b:44497 (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 16 from head at StringIndexer.scala:315
+23/12/29 23:33:00 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+23/12/29 23:33:00 INFO SparkContext: Starting job: head at StringIndexer.scala:315
+23/12/29 23:33:00 INFO DAGScheduler: Got job 9 (head at StringIndexer.scala:315) with 1 output partitions
+23/12/29 23:33:00 INFO DAGScheduler: Final stage: ResultStage 9 (head at StringIndexer.scala:315)
+23/12/29 23:33:00 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:00 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:00 INFO DAGScheduler: Submitting ResultStage 9 (MapPartitionsRDD[24] at head at StringIndexer.scala:315), which has no missing parents
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_17 stored as values in memory (estimated size 8.9 KB, free 364.8 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_17_piece0 stored as bytes in memory (estimated size 4.5 KB, free 364.8 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on b2ee84b9497b:44497 (size: 4.5 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 17 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 9 (MapPartitionsRDD[24] at head at StringIndexer.scala:315) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Adding task set 9.0 with 1 tasks
+23/12/29 23:33:00 INFO TaskSetManager: Starting task 0.0 in stage 9.0 (TID 9, 172.28.0.4, executor 1, partition 0, ANY, 8428 bytes)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_17_piece0 in memory on 172.28.0.4:35617 (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_16_piece0 in memory on 172.28.0.4:35617 (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO TaskSetManager: Finished task 0.0 in stage 9.0 (TID 9) in 555 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Removed TaskSet 9.0, whose tasks have all completed, from pool 
+23/12/29 23:33:00 INFO DAGScheduler: ResultStage 9 (head at StringIndexer.scala:315) finished in 0.561 s
+23/12/29 23:33:00 INFO DAGScheduler: Job 9 finished: head at StringIndexer.scala:315, took 0.564109 s
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_18 stored as values in memory (estimated size 240.8 KB, free 364.6 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_18_piece0 stored as bytes in memory (estimated size 23.4 KB, free 364.5 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 18 from textFile at ReadWrite.scala:615
+23/12/29 23:33:00 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:00 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:00 INFO DAGScheduler: Got job 10 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:00 INFO DAGScheduler: Final stage: ResultStage 10 (first at ReadWrite.scala:615)
+23/12/29 23:33:00 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:00 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:00 INFO DAGScheduler: Submitting ResultStage 10 (hdfs://namenode:9000/model/regression/stages/2_StringIndexer_5f9dcd4d9087/metadata MapPartitionsRDD[26] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_19 stored as values in memory (estimated size 3.5 KB, free 364.5 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_19_piece0 stored as bytes in memory (estimated size 2.1 KB, free 364.5 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 19 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 10 (hdfs://namenode:9000/model/regression/stages/2_StringIndexer_5f9dcd4d9087/metadata MapPartitionsRDD[26] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Adding task set 10.0 with 1 tasks
+23/12/29 23:33:00 INFO TaskSetManager: Starting task 0.0 in stage 10.0 (TID 10, 172.28.0.4, executor 1, partition 0, ANY, 7957 bytes)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_19_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_18_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO TaskSetManager: Finished task 0.0 in stage 10.0 (TID 10) in 48 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Removed TaskSet 10.0, whose tasks have all completed, from pool 
+23/12/29 23:33:00 INFO DAGScheduler: ResultStage 10 (first at ReadWrite.scala:615) finished in 0.053 s
+23/12/29 23:33:00 INFO DAGScheduler: Job 10 finished: first at ReadWrite.scala:615, took 0.055250 s
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_20 stored as values in memory (estimated size 240.8 KB, free 364.3 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_20_piece0 stored as bytes in memory (estimated size 23.4 KB, free 364.3 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 216
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 265
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 204
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 143
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 173
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 233
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 127
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 181
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 132
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 20 from textFile at ReadWrite.scala:615
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_10_piece0 on b2ee84b9497b:44497 in memory (size: 4.5 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_10_piece0 on 172.28.0.10:44153 in memory (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 269
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 226
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 256
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 201
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 235
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 239
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 258
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 261
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 244
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 188
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 153
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 150
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 207
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 271
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_9_piece0 on b2ee84b9497b:44497 in memory (size: 24.5 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_9_piece0 on 172.28.0.10:44153 in memory (size: 24.5 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 217
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 251
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 264
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 254
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 196
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 241
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 250
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 189
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_14_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_14_piece0 on 172.28.0.10:44153 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 187
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 212
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 140
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 176
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 210
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 169
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 171
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 211
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 219
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 277
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 208
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 126
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 206
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 182
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 243
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 156
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 152
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 190
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 157
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 222
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 163
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 203
+23/12/29 23:33:00 INFO DAGScheduler: Got job 11 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:00 INFO DAGScheduler: Final stage: ResultStage 11 (first at ReadWrite.scala:615)
+23/12/29 23:33:00 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:00 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:00 INFO DAGScheduler: Submitting ResultStage 11 (hdfs://namenode:9000/model/regression/stages/2_StringIndexer_5f9dcd4d9087/metadata MapPartitionsRDD[28] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_12_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_21 stored as values in memory (estimated size 3.5 KB, free 364.6 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_12_piece0 on 172.28.0.10:44153 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_21_piece0 stored as bytes in memory (estimated size 2.1 KB, free 364.6 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 21 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 11 (hdfs://namenode:9000/model/regression/stages/2_StringIndexer_5f9dcd4d9087/metadata MapPartitionsRDD[28] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Adding task set 11.0 with 1 tasks
+23/12/29 23:33:00 INFO TaskSetManager: Starting task 0.0 in stage 11.0 (TID 11, 172.28.0.10, executor 0, partition 0, ANY, 7957 bytes)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 218
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 230
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 135
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_21_piece0 in memory on 172.28.0.10:44153 (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 155
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 148
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 245
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 246
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 172
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 192
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 262
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 149
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 202
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 178
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 228
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 151
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 274
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 162
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 179
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 134
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 154
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 159
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 234
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 283
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 175
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 137
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 229
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 280
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_13_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_13_piece0 on 172.28.0.10:44153 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_17_piece0 on b2ee84b9497b:44497 in memory (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_17_piece0 on 172.28.0.4:35617 in memory (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_20_piece0 in memory on 172.28.0.10:44153 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 281
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_11_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_11_piece0 on 172.28.0.10:44153 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 146
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 186
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 214
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 268
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 279
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 252
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_19_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_19_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 232
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 240
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 272
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 195
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 270
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 238
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 267
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 136
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 209
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 259
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 223
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 170
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 193
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 225
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 164
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 133
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 276
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 144
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 237
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 275
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 129
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 147
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 285
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 139
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 200
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 168
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 255
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 224
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 174
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 278
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 165
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 197
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 177
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 161
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 215
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 158
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 247
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 242
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 142
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 167
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 128
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 183
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 231
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 185
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 160
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_15_piece0 on b2ee84b9497b:44497 in memory (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_15_piece0 on 172.28.0.4:35617 in memory (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 184
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 145
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 138
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 141
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 221
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 194
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_16_piece0 on b2ee84b9497b:44497 in memory (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_16_piece0 on 172.28.0.4:35617 in memory (size: 24.5 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO TaskSetManager: Finished task 0.0 in stage 11.0 (TID 11) in 52 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Removed TaskSet 11.0, whose tasks have all completed, from pool 
+23/12/29 23:33:00 INFO DAGScheduler: ResultStage 11 (first at ReadWrite.scala:615) finished in 0.060 s
+23/12/29 23:33:00 INFO DAGScheduler: Job 11 finished: first at ReadWrite.scala:615, took 0.063082 s
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 273
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 284
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 131
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 205
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 263
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 266
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 220
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 213
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 282
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 191
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 249
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 260
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_18_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Removed broadcast_18_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 180
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 199
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 257
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 236
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 198
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 248
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 227
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 253
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 130
+23/12/29 23:33:00 INFO ContextCleaner: Cleaned accumulator 166
+23/12/29 23:33:00 INFO SparkContext: Starting job: parquet at StringIndexer.scala:313
+23/12/29 23:33:00 INFO DAGScheduler: Got job 12 (parquet at StringIndexer.scala:313) with 1 output partitions
+23/12/29 23:33:00 INFO DAGScheduler: Final stage: ResultStage 12 (parquet at StringIndexer.scala:313)
+23/12/29 23:33:00 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:00 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:00 INFO DAGScheduler: Submitting ResultStage 12 (MapPartitionsRDD[30] at parquet at StringIndexer.scala:313), which has no missing parents
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_22 stored as values in memory (estimated size 71.1 KB, free 365.7 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_22_piece0 stored as bytes in memory (estimated size 25.5 KB, free 365.7 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on b2ee84b9497b:44497 (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 22 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:00 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 12 (MapPartitionsRDD[30] at parquet at StringIndexer.scala:313) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Adding task set 12.0 with 1 tasks
+23/12/29 23:33:00 INFO TaskSetManager: Starting task 0.0 in stage 12.0 (TID 12, 172.28.0.4, executor 1, partition 0, PROCESS_LOCAL, 8117 bytes)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_22_piece0 in memory on 172.28.0.4:35617 (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:33:00 INFO TaskSetManager: Finished task 0.0 in stage 12.0 (TID 12) in 37 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:00 INFO TaskSchedulerImpl: Removed TaskSet 12.0, whose tasks have all completed, from pool 
+23/12/29 23:33:00 INFO DAGScheduler: ResultStage 12 (parquet at StringIndexer.scala:313) finished in 0.047 s
+23/12/29 23:33:00 INFO DAGScheduler: Job 12 finished: parquet at StringIndexer.scala:313, took 0.047887 s
+23/12/29 23:33:00 INFO FileSourceStrategy: Pruning directories with: 
+23/12/29 23:33:00 INFO FileSourceStrategy: Post-Scan Filters: 
+23/12/29 23:33:00 INFO FileSourceStrategy: Output Data Schema: struct<labels: array<string>>
+23/12/29 23:33:00 INFO FileSourceScanExec: Pushed Filters: 
+23/12/29 23:33:00 INFO CodeGenerator: Code generated in 11.54494 ms
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_23 stored as values in memory (estimated size 283.2 KB, free 365.4 MB)
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_23_piece0 stored as bytes in memory (estimated size 24.5 KB, free 365.4 MB)
+23/12/29 23:33:00 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on b2ee84b9497b:44497 (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:00 INFO SparkContext: Created broadcast 23 from head at StringIndexer.scala:315
+23/12/29 23:33:00 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+23/12/29 23:33:00 INFO SparkContext: Starting job: head at StringIndexer.scala:315
+23/12/29 23:33:00 INFO DAGScheduler: Got job 13 (head at StringIndexer.scala:315) with 1 output partitions
+23/12/29 23:33:00 INFO DAGScheduler: Final stage: ResultStage 13 (head at StringIndexer.scala:315)
+23/12/29 23:33:00 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:00 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:00 INFO DAGScheduler: Submitting ResultStage 13 (MapPartitionsRDD[34] at head at StringIndexer.scala:315), which has no missing parents
+23/12/29 23:33:00 INFO MemoryStore: Block broadcast_24 stored as values in memory (estimated size 8.9 KB, free 365.4 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_24_piece0 stored as bytes in memory (estimated size 4.5 KB, free 365.4 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on b2ee84b9497b:44497 (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 24 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 13 (MapPartitionsRDD[34] at head at StringIndexer.scala:315) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 13.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 13.0 (TID 13, 172.28.0.4, executor 1, partition 0, ANY, 8428 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_24_piece0 in memory on 172.28.0.4:35617 (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_23_piece0 in memory on 172.28.0.4:35617 (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 13.0 (TID 13) in 63 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 13.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 13 (head at StringIndexer.scala:315) finished in 0.068 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 13 finished: head at StringIndexer.scala:315, took 0.069783 s
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_25 stored as values in memory (estimated size 240.8 KB, free 365.1 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_25_piece0 stored as bytes in memory (estimated size 23.4 KB, free 365.1 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 25 from textFile at ReadWrite.scala:615
+23/12/29 23:33:01 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:01 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:01 INFO DAGScheduler: Got job 14 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 14 (first at ReadWrite.scala:615)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 14 (hdfs://namenode:9000/model/regression/stages/3_VectorAssembler_e9fe81b7e154/metadata MapPartitionsRDD[36] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_26 stored as values in memory (estimated size 3.5 KB, free 365.1 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_26_piece0 stored as bytes in memory (estimated size 2.1 KB, free 365.1 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 26 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 14 (hdfs://namenode:9000/model/regression/stages/3_VectorAssembler_e9fe81b7e154/metadata MapPartitionsRDD[36] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 14.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 14.0 (TID 14, 172.28.0.10, executor 0, partition 0, ANY, 7959 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_26_piece0 in memory on 172.28.0.10:44153 (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_25_piece0 in memory on 172.28.0.10:44153 (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 14.0 (TID 14) in 32 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 14.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 14 (first at ReadWrite.scala:615) finished in 0.036 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 14 finished: first at ReadWrite.scala:615, took 0.037070 s
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_27 stored as values in memory (estimated size 240.8 KB, free 364.9 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_27_piece0 stored as bytes in memory (estimated size 23.4 KB, free 364.8 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 27 from textFile at ReadWrite.scala:615
+23/12/29 23:33:01 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:01 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:01 INFO DAGScheduler: Got job 15 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 15 (first at ReadWrite.scala:615)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 15 (hdfs://namenode:9000/model/regression/stages/3_VectorAssembler_e9fe81b7e154/metadata MapPartitionsRDD[38] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_28 stored as values in memory (estimated size 3.5 KB, free 364.8 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_28_piece0 stored as bytes in memory (estimated size 2.1 KB, free 364.8 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 28 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 15 (hdfs://namenode:9000/model/regression/stages/3_VectorAssembler_e9fe81b7e154/metadata MapPartitionsRDD[38] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 15.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 15.0 (TID 15, 172.28.0.4, executor 1, partition 0, ANY, 7959 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_28_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_27_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 15.0 (TID 15) in 46 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 15.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 15 (first at ReadWrite.scala:615) finished in 0.051 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 15 finished: first at ReadWrite.scala:615, took 0.053708 s
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_29 stored as values in memory (estimated size 240.8 KB, free 364.6 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_29_piece0 stored as bytes in memory (estimated size 23.4 KB, free 364.6 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 29 from textFile at ReadWrite.scala:615
+23/12/29 23:33:01 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:01 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:01 INFO DAGScheduler: Got job 16 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 16 (first at ReadWrite.scala:615)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 16 (hdfs://namenode:9000/model/regression/stages/4_LinearRegression_32ce0ec80dc6/metadata MapPartitionsRDD[40] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_30 stored as values in memory (estimated size 3.5 KB, free 364.6 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_30_piece0 stored as bytes in memory (estimated size 2.1 KB, free 364.6 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 30 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 16 (hdfs://namenode:9000/model/regression/stages/4_LinearRegression_32ce0ec80dc6/metadata MapPartitionsRDD[40] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 16.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 16.0 (TID 16, 172.28.0.4, executor 1, partition 0, ANY, 7960 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_30_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_29_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 16.0 (TID 16) in 32 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 16.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 16 (first at ReadWrite.scala:615) finished in 0.037 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 16 finished: first at ReadWrite.scala:615, took 0.039948 s
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_31 stored as values in memory (estimated size 240.8 KB, free 364.3 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_31_piece0 stored as bytes in memory (estimated size 23.4 KB, free 364.3 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on b2ee84b9497b:44497 (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 31 from textFile at ReadWrite.scala:615
+23/12/29 23:33:01 INFO FileInputFormat: Total input paths to process : 1
+23/12/29 23:33:01 INFO SparkContext: Starting job: first at ReadWrite.scala:615
+23/12/29 23:33:01 INFO DAGScheduler: Got job 17 (first at ReadWrite.scala:615) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 17 (first at ReadWrite.scala:615)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 17 (hdfs://namenode:9000/model/regression/stages/4_LinearRegression_32ce0ec80dc6/metadata MapPartitionsRDD[42] at textFile at ReadWrite.scala:615), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_32 stored as values in memory (estimated size 3.5 KB, free 364.3 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_32_piece0 stored as bytes in memory (estimated size 2.1 KB, free 364.3 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_32_piece0 in memory on b2ee84b9497b:44497 (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 32 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 17 (hdfs://namenode:9000/model/regression/stages/4_LinearRegression_32ce0ec80dc6/metadata MapPartitionsRDD[42] at textFile at ReadWrite.scala:615) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 17.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 17.0 (TID 17, 172.28.0.4, executor 1, partition 0, ANY, 7960 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_32_piece0 in memory on 172.28.0.4:35617 (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_31_piece0 in memory on 172.28.0.4:35617 (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 17.0 (TID 17) in 25 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 17.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 17 (first at ReadWrite.scala:615) finished in 0.030 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 17 finished: first at ReadWrite.scala:615, took 0.032573 s
+23/12/29 23:33:01 INFO SparkContext: Starting job: load at LinearRegression.scala:789
+23/12/29 23:33:01 INFO DAGScheduler: Got job 18 (load at LinearRegression.scala:789) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 18 (load at LinearRegression.scala:789)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 18 (MapPartitionsRDD[44] at load at LinearRegression.scala:789), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_33 stored as values in memory (estimated size 71.1 KB, free 364.2 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_33_piece0 stored as bytes in memory (estimated size 25.5 KB, free 364.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_33_piece0 in memory on b2ee84b9497b:44497 (size: 25.5 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 33 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 18 (MapPartitionsRDD[44] at load at LinearRegression.scala:789) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 18.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 18.0 (TID 18, 172.28.0.4, executor 1, partition 0, PROCESS_LOCAL, 8120 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_33_piece0 in memory on 172.28.0.4:35617 (size: 25.5 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 18.0 (TID 18) in 35 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 18.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 18 (load at LinearRegression.scala:789) finished in 0.055 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 18 finished: load at LinearRegression.scala:789, took 0.056854 s
+23/12/29 23:33:01 INFO FileSourceStrategy: Pruning directories with: 
+23/12/29 23:33:01 INFO FileSourceStrategy: Post-Scan Filters: 
+23/12/29 23:33:01 INFO FileSourceStrategy: Output Data Schema: struct<intercept: double, coefficients: vector, scale: double ... 1 more fields>
+23/12/29 23:33:01 INFO FileSourceScanExec: Pushed Filters: 
+23/12/29 23:33:01 INFO CodeGenerator: Code generated in 7.56097 ms
+23/12/29 23:33:01 INFO CodeGenerator: Code generated in 9.346692 ms
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_34 stored as values in memory (estimated size 285.4 KB, free 363.9 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_34_piece0 stored as bytes in memory (estimated size 24.8 KB, free 363.9 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_34_piece0 in memory on b2ee84b9497b:44497 (size: 24.8 KB, free: 366.1 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 34 from head at LinearRegression.scala:801
+23/12/29 23:33:01 INFO FileSourceScanExec: Planning scan with bin packing, max size: 4194304 bytes, open cost is considered as scanning 4194304 bytes.
+23/12/29 23:33:01 INFO SparkContext: Starting job: head at LinearRegression.scala:801
+23/12/29 23:33:01 INFO DAGScheduler: Got job 19 (head at LinearRegression.scala:801) with 1 output partitions
+23/12/29 23:33:01 INFO DAGScheduler: Final stage: ResultStage 19 (head at LinearRegression.scala:801)
+23/12/29 23:33:01 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:01 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:01 INFO DAGScheduler: Submitting ResultStage 19 (MapPartitionsRDD[48] at head at LinearRegression.scala:801), which has no missing parents
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_35 stored as values in memory (estimated size 11.6 KB, free 363.9 MB)
+23/12/29 23:33:01 INFO MemoryStore: Block broadcast_35_piece0 stored as bytes in memory (estimated size 5.3 KB, free 363.9 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_35_piece0 in memory on b2ee84b9497b:44497 (size: 5.3 KB, free: 366.0 MB)
+23/12/29 23:33:01 INFO SparkContext: Created broadcast 35 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:01 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 19 (MapPartitionsRDD[48] at head at LinearRegression.scala:801) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Adding task set 19.0 with 1 tasks
+23/12/29 23:33:01 INFO TaskSetManager: Starting task 0.0 in stage 19.0 (TID 19, 172.28.0.10, executor 0, partition 0, ANY, 8431 bytes)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_35_piece0 in memory on 172.28.0.10:44153 (size: 5.3 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO BlockManagerInfo: Added broadcast_34_piece0 in memory on 172.28.0.10:44153 (size: 24.8 KB, free: 366.2 MB)
+23/12/29 23:33:01 INFO TaskSetManager: Finished task 0.0 in stage 19.0 (TID 19) in 119 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:33:01 INFO TaskSchedulerImpl: Removed TaskSet 19.0, whose tasks have all completed, from pool 
+23/12/29 23:33:01 INFO DAGScheduler: ResultStage 19 (head at LinearRegression.scala:801) finished in 0.124 s
+23/12/29 23:33:01 INFO DAGScheduler: Job 19 finished: head at LinearRegression.scala:801, took 0.127016 s
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 428
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 340
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 356
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 441
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 346
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_29_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_29_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 343
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 374
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_28_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_28_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 389
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 373
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 436
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 485
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 426
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 313
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 518
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 301
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 507
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 404
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 472
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 348
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 462
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 480
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 329
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 336
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 435
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_27_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO CodeGenerator: Code generated in 18.98988 ms
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_27_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 488
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 434
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_23_piece0 on b2ee84b9497b:44497 in memory (size: 24.5 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_23_piece0 on 172.28.0.4:35617 in memory (size: 24.5 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 319
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 477
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 357
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 379
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 294
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 297
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 383
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 337
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 382
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 345
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 504
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 307
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 420
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 430
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 402
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 520
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 432
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 506
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 350
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 365
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 367
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 399
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 331
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 388
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 408
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 308
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 300
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 467
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 354
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 396
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 407
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 510
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 493
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 368
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 375
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 496
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 347
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 519
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 292
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 499
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 425
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 302
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 502
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 411
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 427
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 380
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 309
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 303
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 447
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 400
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 446
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 458
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 440
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 474
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 473
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 293
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 481
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 322
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 296
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 325
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 355
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 378
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 314
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 445
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 311
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 429
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_20_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_20_piece0 on 172.28.0.10:44153 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 484
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 310
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 454
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 460
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 419
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 324
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 421
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 468
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 359
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 497
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 352
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 456
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 410
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 451
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 443
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 515
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 330
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 353
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 287
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 513
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 363
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 494
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 489
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 511
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 344
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 405
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 361
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_24_piece0 on 172.28.0.4:35617 in memory (size: 4.5 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_24_piece0 on b2ee84b9497b:44497 in memory (size: 4.5 KB, free: 366.1 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 486
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 295
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 465
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 386
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 290
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 377
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_33_piece0 on b2ee84b9497b:44497 in memory (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_33_piece0 on 172.28.0.4:35617 in memory (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 475
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 464
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 471
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 476
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 349
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_22_piece0 on b2ee84b9497b:44497 in memory (size: 25.5 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_22_piece0 on 172.28.0.4:35617 in memory (size: 25.5 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 478
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 369
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 291
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 342
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 364
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 304
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 442
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 315
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 306
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 413
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 333
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 371
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 439
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 500
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 453
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 431
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 495
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 334
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 509
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_21_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_21_piece0 on 172.28.0.10:44153 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 401
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 321
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 312
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 490
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 470
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 318
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 316
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 381
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 326
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 469
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 362
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 286
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 423
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 449
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 376
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 395
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 327
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_26_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_26_piece0 on 172.28.0.10:44153 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 403
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 498
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 299
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 450
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 351
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 415
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_31_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_31_piece0 on 172.28.0.4:35617 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 461
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 332
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 393
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 289
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 416
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 358
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 338
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 459
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 372
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 514
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_30_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_30_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO SparkContext: Starting job: first at /python/backend/integration_app.py:59
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 438
+23/12/29 23:33:02 INFO DAGScheduler: Got job 20 (first at /python/backend/integration_app.py:59) with 1 output partitions
+23/12/29 23:33:02 INFO DAGScheduler: Final stage: ResultStage 20 (first at /python/backend/integration_app.py:59)
+23/12/29 23:33:02 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_25_piece0 on b2ee84b9497b:44497 in memory (size: 23.4 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:02 INFO DAGScheduler: Submitting ResultStage 20 (MapPartitionsRDD[57] at first at /python/backend/integration_app.py:59), which has no missing parents
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_25_piece0 on 172.28.0.10:44153 in memory (size: 23.4 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 505
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 384
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 339
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 328
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 422
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 320
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 414
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 466
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 394
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 433
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 412
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 298
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 370
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 398
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 409
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 305
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 397
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 424
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 501
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_32_piece0 on b2ee84b9497b:44497 in memory (size: 2.1 KB, free: 366.2 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_32_piece0 on 172.28.0.4:35617 in memory (size: 2.1 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 341
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 437
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 517
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 387
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 360
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 385
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 487
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 452
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 503
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 390
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 508
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_34_piece0 on b2ee84b9497b:44497 in memory (size: 24.8 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_34_piece0 on 172.28.0.10:44153 in memory (size: 24.8 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 482
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 483
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 406
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 492
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 516
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 455
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 479
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 317
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 288
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 444
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_35_piece0 on b2ee84b9497b:44497 in memory (size: 5.3 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Removed broadcast_35_piece0 on 172.28.0.10:44153 in memory (size: 5.3 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 391
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 335
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 448
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 392
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 491
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 512
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 463
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 417
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 323
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 457
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 418
+23/12/29 23:33:02 INFO ContextCleaner: Cleaned accumulator 366
+23/12/29 23:33:02 INFO MemoryStore: Block broadcast_36 stored as values in memory (estimated size 30.9 KB, free 366.0 MB)
+23/12/29 23:33:02 INFO MemoryStore: Block broadcast_36_piece0 stored as bytes in memory (estimated size 13.5 KB, free 366.0 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Added broadcast_36_piece0 in memory on b2ee84b9497b:44497 (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO SparkContext: Created broadcast 36 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:02 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 20 (MapPartitionsRDD[57] at first at /python/backend/integration_app.py:59) (first 15 tasks are for partitions Vector(0))
+23/12/29 23:33:02 INFO TaskSchedulerImpl: Adding task set 20.0 with 1 tasks
+23/12/29 23:33:02 INFO TaskSetManager: Starting task 0.0 in stage 20.0 (TID 20, 172.28.0.4, executor 1, partition 0, PROCESS_LOCAL, 7856 bytes)
+23/12/29 23:33:02 INFO BlockManagerInfo: Added broadcast_36_piece0 in memory on 172.28.0.4:35617 (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO TaskSetManager: Finished task 0.0 in stage 20.0 (TID 20) in 128 ms on 172.28.0.4 (executor 1) (1/1)
+23/12/29 23:33:02 INFO TaskSchedulerImpl: Removed TaskSet 20.0, whose tasks have all completed, from pool 
+23/12/29 23:33:02 INFO DAGScheduler: ResultStage 20 (first at /python/backend/integration_app.py:59) finished in 0.149 s
+23/12/29 23:33:02 INFO DAGScheduler: Job 20 finished: first at /python/backend/integration_app.py:59, took 0.154797 s
+23/12/29 23:33:02 INFO SparkContext: Starting job: first at /python/backend/integration_app.py:59
+23/12/29 23:33:02 INFO DAGScheduler: Got job 21 (first at /python/backend/integration_app.py:59) with 1 output partitions
+23/12/29 23:33:02 INFO DAGScheduler: Final stage: ResultStage 21 (first at /python/backend/integration_app.py:59)
+23/12/29 23:33:02 INFO DAGScheduler: Parents of final stage: List()
+23/12/29 23:33:02 INFO DAGScheduler: Missing parents: List()
+23/12/29 23:33:02 INFO DAGScheduler: Submitting ResultStage 21 (MapPartitionsRDD[57] at first at /python/backend/integration_app.py:59), which has no missing parents
+23/12/29 23:33:02 INFO MemoryStore: Block broadcast_37 stored as values in memory (estimated size 30.9 KB, free 366.0 MB)
+23/12/29 23:33:02 INFO MemoryStore: Block broadcast_37_piece0 stored as bytes in memory (estimated size 13.5 KB, free 366.0 MB)
+23/12/29 23:33:02 INFO BlockManagerInfo: Added broadcast_37_piece0 in memory on b2ee84b9497b:44497 (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO SparkContext: Created broadcast 37 from broadcast at DAGScheduler.scala:1161
+23/12/29 23:33:02 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 21 (MapPartitionsRDD[57] at first at /python/backend/integration_app.py:59) (first 15 tasks are for partitions Vector(1))
+23/12/29 23:33:02 INFO TaskSchedulerImpl: Adding task set 21.0 with 1 tasks
+23/12/29 23:33:02 INFO TaskSetManager: Starting task 0.0 in stage 21.0 (TID 21, 172.28.0.10, executor 0, partition 1, PROCESS_LOCAL, 7927 bytes)
+23/12/29 23:33:02 INFO BlockManagerInfo: Added broadcast_37_piece0 in memory on 172.28.0.10:44153 (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:33:02 INFO TaskSetManager: Finished task 0.0 in stage 21.0 (TID 21) in 502 ms on 172.28.0.10 (executor 0) (1/1)
+23/12/29 23:33:02 INFO TaskSchedulerImpl: Removed TaskSet 21.0, whose tasks have all completed, from pool 
+23/12/29 23:33:02 INFO DAGScheduler: ResultStage 21 (first at /python/backend/integration_app.py:59) finished in 0.509 s
+23/12/29 23:33:02 INFO DAGScheduler: Job 21 finished: first at /python/backend/integration_app.py:59, took 0.512147 s
+INFO:     127.0.0.1:43516 - "POST /predict_salary HTTP/1.1" 200 OK
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 526
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 524
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 527
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 545
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 565
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 535
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 536
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 538
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 552
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 532
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 564
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 547
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 543
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 555
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 554
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 570
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 540
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 560
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 537
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 549
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 558
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 542
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 572
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 539
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 567
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 541
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 563
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 534
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 553
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 566
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 529
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 548
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 562
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 528
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 531
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 530
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 561
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 568
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 544
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 571
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 523
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 569
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 533
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 550
+23/12/29 23:59:03 INFO BlockManagerInfo: Removed broadcast_36_piece0 on b2ee84b9497b:44497 in memory (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:59:03 INFO BlockManagerInfo: Removed broadcast_36_piece0 on 172.28.0.4:35617 in memory (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 559
+23/12/29 23:59:03 INFO BlockManagerInfo: Removed broadcast_37_piece0 on b2ee84b9497b:44497 in memory (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:59:03 INFO BlockManagerInfo: Removed broadcast_37_piece0 on 172.28.0.10:44153 in memory (size: 13.5 KB, free: 366.3 MB)
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 525
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 546
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 556
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 557
+23/12/29 23:59:03 INFO ContextCleaner: Cleaned accumulator 551

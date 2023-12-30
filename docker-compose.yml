@@ -80,11 +80,13 @@ services:
     ports:
       - '8080:8080'
       - '7077:7077'
+      - '8000:8000'
+      - '8066:8066'
     volumes:
       - ./hive-site.xml:/opt/bitnami/spark/conf/hive-site.xml
       - ./python:/python
       - spark:/opt/bitnami/python/lib/python3.6/site-packages
-
+ 
   spark-worker1:
     image: bitnami/spark:2.4.3-debian-9-r81
     container_name: spark-worker1
@@ -149,7 +151,7 @@ services:
     environment:
       SERVICE_PRECONDITION: "namenode:9870 datanode:9864 hive-metastore-postgresql:5432"
     ports:
-      - "9083:9083"
+      - "9084:9083"
 
   hive-metastore-postgresql:
     image: bde2020/hive-metastore-postgresql:2.3.0
@@ -168,7 +170,7 @@ services:
     container_name: hue
     restart: always
     ports:
-      - 8888:8888
+      - 8889:8888
     volumes:
       - ./hue.ini:/usr/share/hue/desktop/conf/hue.ini
     depends_on:
