@@ -7,6 +7,8 @@ hive_table = "bigdata.comment_table"
 
 # 对每个batch进行处理的函数
 def foreach_batch_function(df, epoch_id):
+    print("epoch_id=",epoch_id)
+    print(df)
     df.write.insertInto(hive_table, overwrite=False)
 
 # 创建spark对话，连接hive
@@ -16,13 +18,8 @@ spark = SparkSession \
     .enableHiveSupport() \
     .getOrCreate()
 
-# # 读取数据到DataFrame
-# data = [("a", "b", 0, "2023-12-20 22:00:00")]
-# df = spark.createDataFrame(data, ["company", "comment", "label", "create_time"])
-# print(df)
-
-# 将DataFrame插入Hive表
-# df.write.insertInto(hive_table, overwrite=False)
+# 设置日志级别
+spark.sparkContext.setLogLevel("WARN")
 
 # 创建流读取 Kafka 主题数据
 df = spark \
@@ -30,7 +27,6 @@ df = spark \
     .format("kafka") \
     .option("kafka.bootstrap.servers", "kafka:9092") \
     .option("subscribe", topic_name) \
-    .option("startingOffsets", "earliest") \
     .option("group.id", 1) \
     .load()
 
@@ -53,10 +49,3 @@ df.select("json_data.company", "json_data.comment", "json_data.label", "json_dat
     .foreachBatch(foreach_batch_function) \
     .start() \
     .awaitTermination()
-
-# df.selectExpr("json_data.create_time") \
-#     .writeStream \
-#     .outputMode("append") \
-#     .format("console") \
-#     .start() \
-#     .awaitTermination()

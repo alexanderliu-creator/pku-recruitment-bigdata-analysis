@@ -137,20 +137,18 @@ def bac_charts(request):
         ))
     )
 
-    # 评分数据
-    # 绘制公司评分
-    comment_df = pd.read_csv("/python/ljt_data/mock/comments.csv")
-    grouped_data = comment_df.groupby('company').agg({'label': 'mean'}).reset_index()
-    company = grouped_data["company"].tolist()
-    score = grouped_data['label'].tolist()
-
-    for i,ps in enumerate(score):
-        ps += random.uniform(-0.1, 0.2)
-        if ps >= 1.0:
-            ps = 0.99
-        elif ps <= 0.0:
-            ps = 0.01
-        score[i] = ps
+    # 发送请求获取公司得分数据
+    response = requests.get("http://localhost:8066/company_scores")
+    if response.status_code == 200:
+        data = response.json()
+        # 处理响应数据
+        company = data["company"]
+        score = data["score"]
+    else:
+        comment_df = pd.read_csv("/python/ljt_data/mock/comments.csv")
+        grouped_data = comment_df.groupby('company').agg({'label': 'mean'}).reset_index()
+        company = grouped_data["company"].tolist()
+        score = grouped_data['label'].tolist()
     
     bar_chart = (
         Bar()
@@ -234,18 +232,19 @@ def alg_charts(request):
 
     # 评分数据
     # 绘制公司评分
-    comment_df = pd.read_csv("/python/ljt_data/mock/comments.csv")
-    grouped_data = comment_df.groupby('company').agg({'label': 'mean'}).reset_index()
-    company = grouped_data["company"].tolist()
-    score = grouped_data['label'].tolist()
 
-    for i,ps in enumerate(score):
-        ps += random.uniform(-0.1, 0.2)
-        if ps >= 1.0:
-            ps = 0.99
-        elif ps <= 0.0:
-            ps = 0.01
-        score[i] = ps
+    # 发送请求获取公司得分数据
+    response = requests.get("http://localhost:8066/company_scores")
+    if response.status_code == 200:
+        data = response.json()
+        # 处理响应数据
+        company = data["company"]
+        score = data["score"]
+    else:
+        comment_df = pd.read_csv("/python/ljt_data/mock/comments.csv")
+        grouped_data = comment_df.groupby('company').agg({'label': 'mean'}).reset_index()
+        company = grouped_data["company"].tolist()
+        score = grouped_data['label'].tolist()
         
     bar_chart = (
         Bar()

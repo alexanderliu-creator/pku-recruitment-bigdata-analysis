@@ -63,8 +63,8 @@ async def predict_salary(request: Request):
 # 预测得分（分类接口）
 @app.get("/company_scores")
 async def get_company_scores():
-    # 读取从上次读取时间到现在的新评论（10天+5min以内）
-    last_read_time = datetime.now() - timedelta(days=10,minutes=10)  
+    # 读取从上次读取时间到现在的新评论（过去10天+5min以内）
+    last_read_time = datetime.now() - timedelta(days=10,minutes=5)  
 
     # 指定要使用的数据库
     spark.sql("USE bigdata")
