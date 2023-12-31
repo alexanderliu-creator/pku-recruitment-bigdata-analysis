@@ -3,3 +3,5 @@ Watching for file changes with StatReloader
   warnings.warn(msg)
 [31/Dec/2023 01:19:54] "GET /algorithm/ HTTP/1.1" 200 53229
 [31/Dec/2023 01:20:03] "GET / HTTP/1.1" 200 32287
+[31/Dec/2023 01:33:05] "GET /backend/ HTTP/1.1" 200 49823
+[31/Dec/2023 01:33:14] "POST /submit_form/ HTTP/1.1" 200 30
