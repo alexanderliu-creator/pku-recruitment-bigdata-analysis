@@ -5,13 +5,13 @@
 
 **相关依赖安装**
 
-pip install -r requirements.txt
+`pip install -r requirements.txt`
 
 **启动项目**
 
-cd docker-hadoop-hive-spark
+`cd docker-hadoop-hive-spark`
 
-bash startup.sh
+`bash startup.sh`
 
 **检查服务**
 
