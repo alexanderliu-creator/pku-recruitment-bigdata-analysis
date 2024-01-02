@@ -1,3 +1,9 @@
+"""
+    功能：（demo）测试情感分类模型
+    模型：加载自hdfs://namenode:9000/model/classfication
+    预测文本：自定义文本
+    输出：情感分类标签
+"""
 from pyspark.sql import SparkSession
 from pyspark.ml import PipelineModel
 from pyspark.ml.feature import Tokenizer, StopWordsRemover, HashingTF, IDF, StringIndexer

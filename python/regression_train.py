@@ -1,3 +1,8 @@
+"""
+    功能：训练Spark ML的线性回归模型预测职位薪资并评估模型性能
+    数据：CSV格式的职位数据（包括教育背景、工作地点和职位名称等）
+    输出：模型保存于hdfs://namenode:9000/model/regression
+"""
 import os
 import sys
 from pyspark.sql import SparkSession

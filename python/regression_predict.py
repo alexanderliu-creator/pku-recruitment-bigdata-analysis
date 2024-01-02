@@ -1,3 +1,9 @@
+"""
+    功能：（demo）基于训练好的回归模型预测职位薪资
+    模型：加载自hdfs://namenode:9000/model/regression的Spark ML回归模型
+    输入数据：特定职位（如NLP算法工程师）、工作地点（如北京）、教育背景（如博士）
+    输出：预测的薪资结果
+"""
 import os
 import sys
 from pyspark.sql import SparkSession

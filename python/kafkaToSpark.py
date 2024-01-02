@@ -1,3 +1,8 @@
+"""
+    功能：实现实时评论数据处理与存储
+    数据：使用Apache Spark结构化流处理来读取Kafka中的评论数据
+    输出：将处理后的数据存储到Hive表中
+"""
 from pyspark.sql import SparkSession
 from pyspark.sql.types import StructType, StructField, StringType, ByteType, TimestampType
 from pyspark.sql.functions import from_json, col

@@ -1,3 +1,8 @@
+"""
+    功能：训练用于情感分类的模型
+    数据：情感分类数据集
+    输出：训练完成的模型保存于hdfs://namenode:9000/model/classfication
+"""
 import os
 import sys
 from pyspark.sql import SparkSession
@@ -8,7 +13,7 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 from pyspark.ml import PipelineModel
 import joblib
 
-# Initialize Spark Session
+#初始化Spark会话
 spark = SparkSession.builder \
     .appName("TextClassificationModelTraining") \
     .config("spark.driver.extraJavaOptions", "-Dfile.encoding=UTF-8") \
@@ -21,13 +26,13 @@ sc = spark.sparkContext
 # 设置日志级别为ERROR
 sc.setLogLevel("ERROR")
 
-# Load dataset
+#加载训练数据
 weibo_senti_df = spark.read.csv("/python/data/weibo_senti_100k.csv", header=True, inferSchema=True)
 
-# Split dataset
+#划分数据集
 train_df, test_df = weibo_senti_df.randomSplit([0.7, 0.3], seed=42)
 
-# Data preprocessing pipeline
+#pipeline
 tokenizer = Tokenizer(inputCol="review", outputCol="words")
 remover = StopWordsRemover(inputCol="words", outputCol="filtered")
 hashingTF = HashingTF(inputCol="filtered", outputCol="rawFeatures")
@@ -36,19 +41,18 @@ label_stringIdx = StringIndexer(inputCol="label", outputCol="labelIndex")
 nb = NaiveBayes(featuresCol="features", labelCol="labelIndex")
 pipeline = Pipeline(stages=[tokenizer, remover, hashingTF, idf, label_stringIdx, nb])
 
-
-# Train model and save model
+#训练模型
 model = pipeline.fit(train_df)
 
-
-# Evaluate model
+#模型评估
 test_predictions = model.transform(test_df)
 evaluator = MulticlassClassificationEvaluator(labelCol="labelIndex", predictionCol="prediction", metricName="accuracy")
 test_accuracy = evaluator.evaluate(test_predictions)
 print(f"Test Dataset Accuracy: {test_accuracy}")
 
-# 切记model_path不能改成python，会清空里面所有内容
+#模型保存
 model_path = "hdfs://namenode:9000/model/classfication"
 model.write().overwrite().save(model_path)
+
 # Stop Spark session
 spark.stop()
