@@ -1,7 +1,0 @@
-Watching for file changes with StatReloader
-/opt/bitnami/python/lib/python3.6/site-packages/pandas/compat/__init__.py:120: UserWarning: Could not import the lzma module. Your installed Python is incomplete. Attempting to use lzma compression will result in a RuntimeError.
-  warnings.warn(msg)
-[31/Dec/2023 01:19:54] "GET /algorithm/ HTTP/1.1" 200 53229
-[31/Dec/2023 01:20:03] "GET / HTTP/1.1" 200 32287
-[31/Dec/2023 01:33:05] "GET /backend/ HTTP/1.1" 200 49823
-[31/Dec/2023 01:33:14] "POST /submit_form/ HTTP/1.1" 200 30
