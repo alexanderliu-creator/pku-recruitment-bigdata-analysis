@@ -3,17 +3,19 @@
 
 ## 运行流程
 
-**相关依赖安装**
+**相关依赖安装(若本地环境已有docker和docker-compose可忽略)**
 
-`pip install -r requirements.txt`
+```bash
+pip install -r requirements.txt
+```
 
 **启动项目**
 
-`cd docker-hadoop-hive-spark`
+```bash
+bash startup.sh
+```
 
-`bash startup.sh`
-
-**检查服务**
+**检查服务(项目启动后需要等待一小段时间才能访问数据分析看板)**
 
 - 数据分析看板：http://127.0.0.1:8000/
 - Namenode: http://127.0.0.1:9870/dfshealth.html#tab-overview
@@ -27,7 +29,7 @@
 - Spark Master: http://localhost:8080/
 - Spark Worker: http://localhost:8081/
 - Spark Job WebUI: http://localhost:4040/ (当 Spark 任务在 spark-master 运行时才可访问)
-- hue: http://localhost:8889/
+- hue: http://localhost:8888/
 
 
 ## 说明

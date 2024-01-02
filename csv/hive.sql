@@ -29,7 +29,6 @@ CREATE TABLE `job`(
 row format delimited
 fields terminated by ','
 lines terminated by '\n';
-LOAD DATA LOCAL INPATH '/csv/job_clean.csv' OVERWRITE INTO TABLE job;
 
 DROP TABLE IF EXISTS position_table;
 CREATE TABLE `position_table`(
@@ -44,7 +43,6 @@ CREATE TABLE `position_table`(
 row format delimited
 fields terminated by ','
 lines terminated by '\n';
-LOAD DATA LOCAL INPATH '/csv/jobsWithTime.csv' OVERWRITE INTO TABLE position_table;
 
 DROP TABLE IF EXISTS comment_table;
 CREATE TABLE `comment_table`(

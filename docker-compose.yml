@@ -10,6 +10,7 @@ services:
       - 9010:9000
     volumes:
       - hadoop_namenode:/hadoop/dfs/name
+      - ./model:/model
     environment:
       - CLUSTER_NAME=test
       - CORE_CONF_fs_defaultFS=hdfs://namenode:9000
@@ -85,7 +86,7 @@ services:
     volumes:
       - ./hive-site.xml:/opt/bitnami/spark/conf/hive-site.xml
       - ./python:/python
-      - spark:/opt/bitnami/python/lib/python3.6/site-packages
+      - ./site-packages:/opt/bitnami/python/lib/python3.6/site-packages
  
   spark-worker1:
     image: bitnami/spark:2.4.3-debian-9-r81
@@ -105,7 +106,7 @@ services:
     volumes:
       - ./hive-site.xml:/opt/bitnami/spark/conf/hive-site.xml
       - ./python:/python
-      - spark:/opt/bitnami/python/lib/python3.6/site-packages
+      - ./site-packages:/opt/bitnami/python/lib/python3.6/site-packages
 
   spark-worker2:
     image: bitnami/spark:2.4.3-debian-9-r81
@@ -123,7 +124,7 @@ services:
     volumes:
       - ./hive-site.xml:/opt/bitnami/spark/conf/hive-site.xml
       - ./python:/python
-      - spark:/opt/bitnami/python/lib/python3.6/site-packages
+      - ./site-packages:/opt/bitnami/python/lib/python3.6/site-packages
 
   hive-server:
     image: bde2020/hive:2.3.2-postgresql-metastore
@@ -140,6 +141,8 @@ services:
     ports:
       - 10000:10000
       - 10002:10002
+    volumes:
+      - ./csv:/csv
 
   hive-metastore:
     image: bde2020/hive:2.3.2-postgresql-metastore
@@ -170,7 +173,7 @@ services:
     container_name: hue
     restart: always
     ports:
-      - 8889:8888
+      - 8888:8888
     volumes:
       - ./hue.ini:/usr/share/hue/desktop/conf/hue.ini
     depends_on:
@@ -205,4 +208,3 @@ volumes:
   hadoop_datanode:
   hadoop_historyserver:
   hive-metastore-postgresql:
-  spark:
