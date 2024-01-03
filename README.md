@@ -31,7 +31,6 @@ bash startup.sh
 - Spark Master: http://localhost:8080/
 - Spark Worker: http://localhost:8081/
 - Spark Job WebUI: http://localhost:4040/ (当 Spark 任务在 spark-master 运行时才可访问)
-- hue: http://localhost:8888/
 
 **停止项目**
 
