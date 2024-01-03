@@ -190,6 +190,19 @@ services:
     depends_on:
       - zookeeper
 
+  hue:
+    image: gethue/hue:latest
+    container_name: hue
+    restart: always
+    ports:
+      - 8890:8888
+    volumes:
+      - ./hue.ini:/usr/share/hue/desktop/conf/hue.ini
+    depends_on:
+      - hive-server
+      - hive-metastore
+      - hive-metastore-postgresql
+
 volumes:
   hadoop_namenode:
   hadoop_datanode:
