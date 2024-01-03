@@ -1,6 +1,5 @@
 """
     功能：训练Spark ML的线性回归模型预测职位薪资并评估模型性能
-    数据：CSV格式的职位数据（包括教育背景、工作地点和职位名称等）
     输出：模型保存于hdfs://namenode:9000/model/regression
 """
 import os
@@ -18,14 +17,18 @@ sys.stdout = open(sys.stdout.fileno(), mode='w', encoding='utf-8', buffering=1)
 
 # 初始化带有 UTF-8 设置的 Spark 会话
 spark = SparkSession.builder \
-    .appName("salary_prediction") \
+    .appName("salary_train") \
     .config("spark.driver.extraJavaOptions", "-Dfile.encoding=UTF-8") \
     .config("spark.executor.extraJavaOptions", "-Dfile.encoding=UTF-8") \
+    .enableHiveSupport() \
     .getOrCreate()
 
-# 读取 CSV 数据并转换为 Spark DataFrame
-file_path_csv = '/python/data/jobs_mock2.csv'
-df = spark.read.csv(file_path_csv, header=True, inferSchema=True)
+# Hive读取数据并转换为 Spark DataFrame
+spark.sql("USE bigdata")
+query = f"""
+SELECT * FROM position_table
+"""
+df = spark.sql(query)
 
 # 将分类变量转换为数值
 indexers = [
@@ -50,8 +53,6 @@ model = pipeline.fit(train_data)
 
 # 测试模型
 predictions = model.transform(test_data)
-
-# 替换prediction列的值为salary和prediction两个字段值的和除以2
 predictions = predictions.withColumn("prediction", col("prediction"))
 
 # 显示预测结果，现在的prediction列已经是原来的prediction和salary的平均值
@@ -66,9 +67,9 @@ mae = evaluator.evaluate(predictions, {evaluator.metricName: "mae"})
 print(f"Root Mean Squared Error (RMSE): {rmse}")
 print(f"Mean Absolute Error (MAE): {mae}")
 # 模型保存路径
-model_path = "hdfs://namenode:9000/model/regression"
+# model_path = "hdfs://namenode:9000/model/regression2"
 # 将模型保存到 HDFS
-model.write().overwrite().save(model_path)
+# model.write().overwrite().save(model_path)
 
 # 关闭 Spark 会话
 spark.stop()
