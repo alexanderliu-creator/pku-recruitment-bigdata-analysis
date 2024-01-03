@@ -66,10 +66,11 @@ mae = evaluator.evaluate(predictions, {evaluator.metricName: "mae"})
 # 打印评估结果
 print(f"Root Mean Squared Error (RMSE): {rmse}")
 print(f"Mean Absolute Error (MAE): {mae}")
+
 # 模型保存路径
-# model_path = "hdfs://namenode:9000/model/regression2"
+model_path = "hdfs://namenode:9000/model/regression2"
 # 将模型保存到 HDFS
-# model.write().overwrite().save(model_path)
+model.write().overwrite().save(model_path)
 
 # 关闭 Spark 会话
 spark.stop()
