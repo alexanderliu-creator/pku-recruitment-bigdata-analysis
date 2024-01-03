@@ -167,19 +167,6 @@ services:
     container_name: presto-coordinator
     ports:
       - "8089:8089"
-
-  hue:
-    image: gethue/hue:latest
-    container_name: hue
-    restart: always
-    ports:
-      - 8888:8888
-    volumes:
-      - ./hue.ini:/usr/share/hue/desktop/conf/hue.ini
-    depends_on:
-      - hive-server
-      - hive-metastore
-      - hive-metastore-postgresql
   
   zookeeper:
     image: 'bitnami/zookeeper:latest'
