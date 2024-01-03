@@ -1,7 +1,19 @@
 #!/bin/bash
 
+# 创建 ./out 目录，如果它不存在
+mkdir -p ./out
+
+# 创建或更新日志文件
+touch ./out/kafkaToSpark.out
+touch ./out/writeIntoKafka.out
+touch ./out/frontend.out
+touch ./out/backend.out
+
 docker-compose up -d
 echo "容器初始化开始......"
+echo "请等待十秒，正在拉起所有容器......"
+sleep 10  # 等待10秒
+
 docker exec hive-server hive -f /csv/hive.sql
 echo "hive表初始化结束"
 docker exec namenode hdfs dfs -put /model /model

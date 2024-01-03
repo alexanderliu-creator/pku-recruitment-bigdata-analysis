@@ -1,0 +1,5 @@
+**/*.pyc
+
+# mute local out
+/out/
+.idea
