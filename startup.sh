@@ -11,13 +11,15 @@ touch ./out/backend.out
 
 docker-compose up -d
 echo "容器初始化开始......"
-echo "请等待十秒，正在拉起所有容器......"
-sleep 10  # 等待10秒
+echo "请等待一会，正在拉起所有容器......"
+sleep 30  # 等待
 
 docker exec hive-server hive -f /csv/hive.sql
 echo "hive表初始化结束"
+docker exec namenode hdfs dfs -rm -r /model
 docker exec namenode hdfs dfs -put /model /model
 echo "hdfs初始化结束"
+docker exec spark-master bash /python/stopAll.sh
 docker exec spark-master nohup spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.11:2.4.8 /python/kafkaToSpark.py > ./out/kafkaToSpark.out 2>&1 &
 echo "Spark Streaming启动"
 docker exec spark-master nohup python /python/writeIntoKafka.py > ./out/writeIntoKafka.out 2>&1 &

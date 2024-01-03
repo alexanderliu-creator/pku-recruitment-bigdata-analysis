@@ -11,15 +11,11 @@ pip install -r requirements.txt
 
 **启动项目**
 
-首先启动集群
-```bash
-docker-compose up -d
-```
-
-在保证集群启动完整后，运行以下命令
 ```bash
 bash startup.sh
 ```
+
+若出现报错，说明集群未启动完全，可再次运行上述命令
 
 **检查服务(项目启动后需要等待一小段时间才能访问数据分析看板)**
 
