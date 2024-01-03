@@ -10,6 +10,7 @@ pip install -r requirements.txt
 ```
 
 **启动项目**
+
 首先启动集群
 ```bash
 docker-compose up -d
