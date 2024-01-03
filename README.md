@@ -10,7 +10,12 @@ pip install -r requirements.txt
 ```
 
 **启动项目**
+首先启动集群
+```bash
+docker-compose up -d
+```
 
+在保证集群启动完整后，运行以下命令
 ```bash
 bash startup.sh
 ```
