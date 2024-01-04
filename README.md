@@ -1,6 +1,5 @@
 # 企业招聘与就业市场大数据分析
 
-
 ## 部署流程
 
 **相关依赖安装(若本地环境已有docker和docker-compose可忽略)**
@@ -107,3 +106,6 @@ WHERE fl <> '其他'
 GROUP BY fl;
 
 ```
+
+## 传送门
+- [项目ppt](https://github.com/alexanderliu-creator/pku-recruitment-bigdata-analysis/blob/master/%E5%A4%A7%E6%95%B0%E6%8D%AE%E6%9C%AB%E6%9C%9Fv6.pptx)
